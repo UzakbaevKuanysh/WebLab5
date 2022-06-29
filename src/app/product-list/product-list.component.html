@@ -1,0 +1,87 @@
+<h2>Products</h2>
+<div class ="block">
+<div *ngIf = "router.url === '/category/A'">
+    <div *ngFor="let product of Aproducts; let i = index" [ngClass] = "{product:product}">            
+    <a href = {{product.link}}>
+        <img *ngIf = "product.image" src = {{product.image}} /></a>
+    <h3>{{product.name}}</h3>
+
+
+<p *ngIf="product.description">
+Description: {{ product.description }} <br>
+Price : {{product.price}}<br>
+Rating : {{product.rating}}
+</p>
+<a href="https://t.me/Quanyshk"><button type="button" (click)="share()">
+Share
+</button></a>
+<button type="button" (click)="Aproducts.splice(i,1)">delete</button>
+<button class="like-button" [ngClass]="{'liked':isLiked}" (click)="likeTheButton()">
+    Like | <span class="like-counter">{{ likeCount }}</span>
+  </button>
+</div></div>
+
+<div *ngIf = "router.url === '/category/B'">
+    <div *ngFor="let product of Bproducts; let i = index" [ngClass] = "{product:product}">            
+    <a href = {{product.link}}>
+        <img *ngIf = "product.image" src = {{product.image}} /></a>
+    <h3>{{product.name}}</h3>
+
+
+<p *ngIf="product.description">
+Description: {{ product.description }} <br>
+Price : {{product.price}}<br>
+Rating : {{product.rating}}
+</p>
+<a href="https://t.me/Quanyshk"><button type="button" (click)="share()">
+Share
+</button></a>
+<button type="button" (click)="Bproducts.splice(i,1)">delete</button>
+<button class="like-button" [ngClass]="{'liked':isLiked}" (click)="likeTheButton()">
+    Like | <span class="like-counter">{{ likeCount }}</span>
+  </button>
+</div></div>
+
+<div *ngIf = "router.url === '/category/C'">
+    <div *ngFor="let product of Cproducts; let i = index" [ngClass] = "{product:product}">            
+    <a href = {{product.link}}>
+        <img *ngIf = "product.image" src = {{product.image}} /></a>
+    <h3>{{product.name}}</h3>
+
+
+<p *ngIf="product.description">
+Description: {{ product.description }} <br>
+Price : {{product.price}}<br>
+Rating : {{product.rating}}
+</p>
+<a href="https://t.me/Quanyshk"><button type="button" (click)="share()">
+Share
+</button></a>
+<button type="button" (click)="Cproducts.splice(i,1)">delete</button>
+<button class="like-button" [ngClass]="{'liked':isLiked}" (click)="likeTheButton()">
+    Like | <span class="like-counter">{{ likeCount }}</span>
+  </button>
+</div></div>
+
+<div *ngIf = "router.url === '/category/D'">
+    <div *ngFor="let product of Dproducts; let i = index" [ngClass] = "{product:product}">            
+    <a href = {{product.link}}>
+        <img *ngIf = "product.image" src = {{product.image}} /></a>
+    <h3>{{product.name}}</h3>
+
+
+<p *ngIf="product.description">
+Description: {{ product.description }} <br>
+Price : {{product.price}}<br>
+Rating : {{product.rating}}
+</p>
+<a href="https://t.me/Quanyshk"><button type="button" (click)="share()">
+Share
+</button></a>
+<button type="button" (click)="Dproducts.splice(i,1)">delete</button>
+<button class="like-button" [ngClass]="{'liked':isLiked}" (click)="likeTheButton()">
+    Like | <span class="like-counter">{{ likeCount }}</span>
+  </button>
+</div></div>
+</div>
+
